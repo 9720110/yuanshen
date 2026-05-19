@@ -1,0 +1,70 @@
+import type { Region, MapPin } from './types';
+
+export const regions: Region[] = [
+  {
+    id: '蒙德',
+    name: '蒙德',
+    title: '自由之城',
+    themeColor: '#7BE0C0',
+    description: '自由之风守护的城市，也是旅行者开始冒险的地方。',
+  },
+  {
+    id: '璃月',
+    name: '璃月',
+    title: '契约之港',
+    themeColor: '#D4A843',
+    description: '岩之国度，繁华的商港城市，契约与商业的繁荣之地。',
+  },
+  {
+    id: '稻妻',
+    name: '稻妻',
+    title: '永恒之国',
+    themeColor: '#C07BFF',
+    description: '雷之国度，永恒的追求者，封闭的群岛之国。',
+  },
+  {
+    id: '须弥',
+    name: '须弥',
+    title: '智慧之城',
+    themeColor: '#7BFF7B',
+    description: '草之国度，知识与智慧的殿堂，雨林与沙漠交织之地。',
+  },
+  {
+    id: '枫丹',
+    name: '枫丹',
+    title: '正义之都',
+    themeColor: '#4B9EFF',
+    description: '水之国度，正义与审判的舞台，科技与艺术之都。',
+  },
+  {
+    id: '纳塔',
+    name: '纳塔',
+    title: '战争之国',
+    themeColor: '#FF6B35',
+    description: '火之国度，勇士与龙的家园，烈焰与温泉之地。',
+  },
+];
+
+export const mapPins: MapPin[] = [
+  { id: 'mond_statue1', name: '七天神像·蒙德', type: 'waypoint', x: 25, y: 30, icon: '🗿', region: '蒙德', description: '蒙德区域的七天神像，可进行神像供奉与队伍配置。', collected: false },
+  { id: 'mond_oculus1', name: '风神瞳 #1', type: 'oculus', x: 15, y: 20, icon: '💠', region: '蒙德', description: '位于风起地上方的空中。', collected: false },
+  { id: 'mond_oculus2', name: '风神瞳 #2', type: 'oculus', x: 35, y: 15, icon: '💠', region: '蒙德', description: '位于望风山地的悬崖边。', collected: false },
+  { id: 'mond_oculus3', name: '风神瞳 #3', type: 'oculus', x: 45, y: 40, icon: '💠', region: '蒙德', description: '位于星落湖的石柱顶端。', collected: false },
+  { id: 'mond_oculus4', name: '风神瞳 #4', type: 'oculus', x: 55, y: 25, icon: '💠', region: '蒙德', description: '位于低语森林的大树上。', collected: false },
+  { id: 'mond_oculus5', name: '风神瞳 #5', type: 'oculus', x: 20, y: 50, icon: '💠', region: '蒙德', description: '位于鹰翔海滩的岩石上。', collected: false },
+  { id: 'mond_boss1', name: '风魔龙特瓦林', type: 'boss', x: 30, y: 35, icon: '🐉', region: '蒙德', description: '周常BOSS，位于风龙废墟。掉落北风之环等材料。', collected: false },
+  { id: 'mond_boss2', name: '急冻树', type: 'boss', x: 60, y: 45, icon: '🌿', region: '蒙德', description: '世界BOSS，位于蒙德雪山区域。掉落雪隐之种。', collected: false },
+  { id: 'mond_domain1', name: '铭记之谷', type: 'domain', x: 40, y: 55, icon: '🏛️', region: '蒙德', description: '圣遗物秘境：释放迎风之花的梦想。', collected: false },
+  { id: 'mond_domain2', name: '塞西莉亚苗圃', type: 'domain', x: 50, y: 30, icon: '🏛️', region: '蒙德', description: '天赋秘境：自由、抗争、诗文。', collected: false },
+  { id: 'mond_material1', name: '慕风蘑菇', type: 'material', x: 28, y: 28, icon: '🍄', region: '蒙德', description: '蒙德区域特产，多生长在房屋墙壁与树干上。', collected: false },
+  { id: 'mond_material2', name: '塞西莉亚花', type: 'material', x: 22, y: 18, icon: '🌸', region: '蒙德', description: '蒙德区域特产，生长在摘星崖附近。', collected: false },
+  { id: 'mond_material3', name: '风车菊', type: 'material', x: 42, y: 22, icon: '🌼', region: '蒙德', description: '蒙德区域特产，多生长在风能充足的地方。', collected: false },
+  { id: 'mond_chest1', name: '华丽宝箱 #1', type: 'chest', x: 32, y: 32, icon: '📦', region: '蒙德', description: '位于风龙废墟顶部平台。', collected: false },
+  { id: 'mond_chest2', name: '珍贵宝箱 #1', type: 'chest', x: 48, y: 38, icon: '📦', region: '蒙德', description: '位于誓言岬的悬崖下方。', collected: false },
+  { id: 'mond_puzzle1', name: '元素方碑解谜', type: 'puzzle', x: 38, y: 42, icon: '🧩', region: '蒙德', description: '使用风元素激活四个方碑。', collected: false },
+  { id: 'liyue_statue1', name: '七天神像·璃月', type: 'waypoint', x: 25, y: 70, icon: '🗿', region: '璃月', description: '璃月区域的七天神像，岩神像供奉点。', collected: false },
+  { id: 'liyue_boss1', name: '若陀龙王', type: 'boss', x: 35, y: 75, icon: '🐉', region: '璃月', description: '周常BOSS，位于伏龙树之底。', collected: false },
+  { id: 'liyue_boss2', name: '爆炎树', type: 'boss', x: 45, y: 80, icon: '🌿', region: '璃月', description: '世界BOSS，位于璃月翠玦坡。掉落燃愿玛瑙系列。', collected: false },
+  { id: 'liyue_material1', name: '绝云椒椒', type: 'material', x: 30, y: 72, icon: '🌶️', region: '璃月', description: '璃月区域特产，生长在绝云间附近。', collected: false },
+  { id: 'liyue_material2', name: '石珀', type: 'material', x: 40, y: 78, icon: '💛', region: '璃月', description: '璃月区域特产，生长在岩壁与洞穴中。', collected: false },
+];

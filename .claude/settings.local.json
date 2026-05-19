@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create *)",
+      "Read(//c/Users/Administrator/Desktop/**)",
+      "Bash(npx --yes create-vite@latest yuanshen-temp --template react-ts)",
+      "Bash(cp -r yuanshen-temp/* yuanshen-temp/.* yuanshen/)",
+      "Bash(rm -rf yuanshen-temp)",
+      "Bash(npm install *)",
+      "Bash(npx tsc *)",
+      "Bash(npx vite *)",
+      "WebFetch(domain:localhost)",
+      "Bash(curl -s http://localhost:5173/)",
+      "Bash(curl -s http://localhost:5173/src/main.tsx)",
+      "Bash(curl -s http://localhost:5173/src/pages/Home.tsx)",
+      "WebFetch(domain:ys.mihoyo.com)",
+      "WebSearch",
+      "Bash(curl *)",
+      "Bash(awk '{print $5, $NF}')",
+      "Bash(python3 -m json.tool)",
+      "WebFetch(domain:genshin-impact.fandom.com)",
+      "Bash(python3 -c \"import sys,json; data=json.load\\(sys.stdin\\); [print\\(i['name']\\) for i in data]\")",
+      "Bash(python3 -c ' *)",
+      "Bash(file /c/Users/Administrator/Desktop/yuanshen/public/images/elements/*)",
+      "Bash(kill %1)",
+      "Bash(wait)"
+    ]
+  }
+}

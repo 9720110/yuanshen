@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+:root {
+  --theme-primary: #FF4B4B;
+  --theme-secondary: #2C283A;
+  --theme-accent: #E6D3A7;
+  --theme-bg: #0F0D1A;
+  --theme-surface: #1A1728;
+  --theme-text: #F5F0EB;
+  --theme-text-secondary: #A098B0;
+  --theme-glow: rgba(255, 75, 75, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lexend', system-ui, sans-serif;
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* 全局居中容器 - 所有页面内容都用这个 */
+.page-container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .page-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* 全宽容器（用于需要铺满的模块）*/
+.full-width {
+  width: 100%;
+}
+
+/* 动画 */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px var(--theme-glow); }
+  50% { box-shadow: 0 0 40px var(--theme-glow), 0 0 60px var(--theme-glow); }
+}
+
+@keyframes flow-line {
+  0% { transform: translateX(-100%) translateY(0); opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { transform: translateX(100vw) translateY(-30px); opacity: 0; }
+}
+
+@keyframes flow-line-reverse {
+  0% { transform: translateX(100%) translateY(0); opacity: 0; }
+  20% { opacity: 0.5; }
+  80% { opacity: 0.5; }
+  100% { transform: translateX(-100vw) translateY(20px); opacity: 0; }
+}
+
+@keyframes rotate-glow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes card-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+.animate-flow-line {
+  animation: flow-line 8s ease-in-out infinite;
+}
+.animate-flow-line-reverse {
+  animation: flow-line-reverse 10s ease-in-out infinite;
+}
+.animate-rotate-glow {
+  animation: rotate-glow 20s linear infinite;
+}
+
+.glass {
+  background: rgba(26, 23, 40, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hover-card {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.hover-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3) !important;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
