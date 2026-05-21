@@ -23,7 +23,16 @@
       "Bash(python3 -c ' *)",
       "Bash(file /c/Users/Administrator/Desktop/yuanshen/public/images/elements/*)",
       "Bash(kill %1)",
-      "Bash(wait)"
+      "Bash(wait)",
+      "Bash(npx claude-code *)",
+      "Bash(plugin list *)",
+      "Bash(plugin search *)",
+      "Read(//c/Users/Administrator/.claude/plugins/**)",
+      "Bash(node -e \"const d = require\\('C:/Users/Administrator/.claude/plugins/plugin-catalog-cache.json'\\); Object.keys\\(d\\).forEach\\(k => console.log\\(k\\)\\)\")",
+      "Bash(node *)",
+      "Bash(plugin install *)",
+      "Bash(/plugin install *)",
+      "Bash(npm run *)"
     ]
   }
 }

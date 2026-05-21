@@ -1,7 +1,7 @@
 import { useTheme } from '../context/ThemeContext';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { characters, elementIcons, elementColors } from '../data/characters';
+import { characters, elementIcons } from '../data/characters';
 import CharacterAvatar from '../components/CharacterAvatar';
 import { regions } from '../data/regions';
 

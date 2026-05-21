@@ -30,7 +30,6 @@ export default function MapPage() {
   const [activeFilter, setActiveFilter] = useState('all');
   const [activeRegion, setActiveRegion] = useState('全部');
   const [selectedPin, setSelectedPin] = useState<string | null>(null);
-  const [showRoute, setShowRoute] = useState(false);
   const [collected, setCollected] = useState<string[]>([]);
 
   const filteredPins = useMemo(() => {

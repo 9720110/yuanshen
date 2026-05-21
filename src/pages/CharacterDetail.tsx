@@ -549,7 +549,7 @@ export default function CharacterDetail() {
                       </h3>
 
                       <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-4">
-                        {team.characters.map((charName, ci) => {
+                        {team.characters.map((charName) => {
                           const member = characters.find(c => c.name === charName);
                           return (
                             <Link

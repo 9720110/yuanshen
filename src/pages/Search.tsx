@@ -6,8 +6,6 @@ import { characters, elementIcons, elementColors } from '../data/characters';
 import { weapons } from '../data/weapons';
 import { artifactSets } from '../data/artifacts';
 
-type SearchResult = { type: '角色'; data: typeof characters[0] } | { type: '武器'; data: typeof weapons[0] } | { type: '圣遗物'; data: typeof artifactSets[0] };
-
 export default function Search() {
   const { themeColor } = useTheme();
   const [query, setQuery] = useState('');

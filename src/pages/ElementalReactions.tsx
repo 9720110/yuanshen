@@ -47,7 +47,7 @@ const reactions = [
     formula: '基础伤害 + 精通加成×等级系数（雷伤额外提升）', chars: '八重神子、赛诺、刻晴' },
 ];
 
-const typeColors = { 增幅: '#FF6B35', 剧变: '#C07BFF', 其他: '#7BE0C0' };
+const typeColors: Record<string, string> = { 增幅: '#FF6B35', 剧变: '#C07BFF', 其他: '#7BE0C0' };
 
 export default function ElementalReactions() {
   const { themeColor } = useTheme();
@@ -66,10 +66,10 @@ export default function ElementalReactions() {
         {/* 元素轮 */}
         <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="glass rounded-2xl p-8 mb-10 text-center" style={{ borderColor: `${themeColor}15` }}>
           <svg viewBox="0 0 240 240" className="w-48 h-48 mx-auto">
-            {[['Pyro', '#FF4B4B', 120, 30], ['Hydro', '#4B9EFF', 180, 70], ['Electro', '#C07BFF', 190, 130], ['Cryo', '#7BE0FF', 140, 180], ['Dendro', '#7BFF7B', 60, 160], ['Anemo', '#7BE0C0', 20, 100], ['Geo', '#D4A843', 60, 40]].map(([el, color, cx, cy]) => (
-              <g key={el as string}>
-                <circle cx={cx as number} cy={cy as number} r="22" fill={`${color}35`} stroke={color} strokeWidth="2" />
-                <image href={`/images/elements/${(el as string).toLowerCase()}.png`} x={(cx as number) - 14} y={(cy as number) - 14} width="28" height="28" />
+            {([['Pyro', '#FF4B4B', 120, 30], ['Hydro', '#4B9EFF', 180, 70], ['Electro', '#C07BFF', 190, 130], ['Cryo', '#7BE0FF', 140, 180], ['Dendro', '#7BFF7B', 60, 160], ['Anemo', '#7BE0C0', 20, 100], ['Geo', '#D4A843', 60, 40]] as const).map(([el, color, cx, cy]) => (
+              <g key={el}>
+                <circle cx={String(cx)} cy={String(cy)} r="22" fill={`${color}35`} stroke={color} strokeWidth="2" />
+                <image href={`/images/elements/${el.toLowerCase()}.png`} x={String(cx - 14)} y={String(cy - 14)} width="28" height="28" />
               </g>
             ))}
             <text x="120" y="95" textAnchor="middle" fontSize="8" fill="var(--theme-text-secondary)">七元素</text>
@@ -133,7 +133,7 @@ export default function ElementalReactions() {
                 </tr>
               </thead>
               <tbody>
-                {reactions.map((r, i) => (
+                {reactions.map((r) => (
                   <tr key={r.name} className="border-t" style={{ borderColor: `${themeColor}10` }}>
                     <td className="px-4 py-3 font-medium">{r.name}</td>
                     <td className="px-4 py-3">{r.elements.map(e => elementIcons[e]).join(' + ')}</td>
